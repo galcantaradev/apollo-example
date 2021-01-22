@@ -1,5 +1,6 @@
 import { ApolloServer } from 'apollo-server';
 import isEmail from 'isemail';
+import dotenv from 'dotenv';
 
 import { typeDefs } from './schema.mjs';
 import { resolvers } from './resolvers.mjs';
@@ -7,6 +8,7 @@ import { createStore } from './utils.mjs';
 import { LaunchAPI, UserAPI } from './datasource/index.mjs';
 
 const store = createStore();
+// dotenv.config();
 
 const server = new ApolloServer({
   typeDefs,
